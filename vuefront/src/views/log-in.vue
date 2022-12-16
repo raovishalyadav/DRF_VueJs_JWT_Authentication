@@ -59,7 +59,6 @@ export default {
             axios
                 .post('/security/jwt/create/', formData)
                 .then(response => {
-                    console.log(response)
                     const access = response.data.access
                     const refresh = response.data.refresh
 
