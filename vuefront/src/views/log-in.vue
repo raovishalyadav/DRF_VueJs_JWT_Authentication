@@ -62,7 +62,6 @@ export default {
                     const access = response.data.access
                     const refresh = response.data.refresh
 
-                    console.log(access, 'no access token found:(((')
                     this.$store.commit('setAccess', access)
                     this.$store.commit('setRefresh', refresh)
 
