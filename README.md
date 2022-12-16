@@ -1,4 +1,4 @@
-# Django_VueJs_JWT_Authentication
+# DRF_VueJs_JWT_Authentication
 
 
 This is a <b>REST API</b> built using <b><i>Django REST framework (DRF), VUE Js, HTML, CSS, Bootstrap & FontAwesome</i></b>.  
