@@ -28,7 +28,6 @@ export default {
     const access = this.$store.state.access
 
     const user = this.$store.state.isAuthenticated
-    console.log(access, 'no token found:( in app.vue')
 
     if ((access) && (user)) {
       axios.defaults.headers.common['Authorization'] = 'JWT ' + access
@@ -75,7 +74,6 @@ export default {
       axios.post('/security/jwt/refresh/', accessData)
         .then(response => {
           const access = response.data.access
-          console.log(response.data)
           localStorage.setItem('access', access)
           this.$store.commit('setAccess', access)
         })
