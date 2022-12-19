@@ -19,8 +19,7 @@ With the help of this API, one can explore all the possible CRUD operations on :
 ⭐ Dropdown    
 ⭐ URL   
 
-![signup](https://user-images.githubusercontent.com/110458015/208074050-91082ae9-6bcb-474d-b584-004d3a21415e.jpg)
 
-![login](https://user-images.githubusercontent.com/110458015/208073902-744d9998-1015-4dd3-9cb1-e36a8ab28c89.jpg)
-
-![apidata](https://user-images.githubusercontent.com/110458015/208074062-856dab2e-25fe-4120-b105-8f3d4b303586.jpg)
+![112](https://user-images.githubusercontent.com/110458015/208379611-ac67f5ea-442e-42c4-bb9a-7edc2e7cd5c3.jpg)
+![111](https://user-images.githubusercontent.com/110458015/208379619-df63ea4a-6687-4a00-8d7e-245768cf1319.jpg)
+![113](https://user-images.githubusercontent.com/110458015/208379634-9b5527d6-cbe8-4627-82f2-b37b224e082f.jpg)
