@@ -101,7 +101,7 @@ export default {
 
 <style lang="scss">
 body {
-  margin-top: 10vh;
+  margin-top: 13vh;
   background: linear-gradient(to right, cyan, blue, black);
 }
 
