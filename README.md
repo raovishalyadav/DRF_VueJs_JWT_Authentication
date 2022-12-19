@@ -22,4 +22,4 @@ With the help of this API, one can explore all the possible CRUD operations on :
 
 ![112](https://user-images.githubusercontent.com/110458015/208379611-ac67f5ea-442e-42c4-bb9a-7edc2e7cd5c3.jpg)
 ![111](https://user-images.githubusercontent.com/110458015/208379619-df63ea4a-6687-4a00-8d7e-245768cf1319.jpg)
-![113](https://user-images.githubusercontent.com/110458015/208379634-9b5527d6-cbe8-4627-82f2-b37b224e082f.jpg)
+![main](https://user-images.githubusercontent.com/110458015/208390392-ef77e985-7694-4d0b-9b1e-d02bcc447b66.jpg)
