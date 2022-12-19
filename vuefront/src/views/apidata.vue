@@ -1,6 +1,6 @@
 <template>
 
-  <div class="row pt-4">
+  <div class="row pt-2">
     <div class="col-12 mx-auto">
       <div class="input-group my-2 mb-3">
         <div class="col-1 me-2 ms-1">
@@ -39,7 +39,7 @@
             <th class="text-center align-middle px-5">Timestamp</th>
             <th class="text-center align-middle px-4">Integer</th>
             <th class="text-center align-middle px-5">Email</th>
-            <th class="text-center align-middle px-5">Boolean</th>
+            <th class="text-center align-middle px-2">Boolean</th>
             <th class="text-center align-middle px-5">Image</th>
             <th class="text-center align-middle px-5">File</th>
             <th class="text-center align-middle px-5">Comments</th>
@@ -57,7 +57,10 @@
             <td class="text-center align-middle text-light">{{ blog.fourth }}</td>
             <td class="text-center align-middle text-light">{{ blog.fifth }}</td>
             <td class="text-center align-middle py-3 px-2"><img :src="blog.sixth" alt="Image Not Found"></td>
-            <td class="text-center align-middle "><a v-bind:href="blog.seventh">DOWNLOAD {{ blog.seventh }}</a></td>
+            <td class="text-center align-middle " v-if="blog.seventh"> {{
+                getFileName(blog.seventh)
+            }}<a v-bind:href="blog.seventh"> DOWNLOAD</a></td>
+            <td class="text-center align-middle text-light" v-else></td>
             <td class="text-center align-middle text-light">{{ blog.eight }}</td>
             <td class="text-center align-middle text-light">{{ blog.nine }}</td>
             <td class="text-center align-middle"><a v-bind:href="blog.url">{{ blog.url }}</a></td>
@@ -102,6 +105,10 @@ export default {
     }
   },
   methods: {
+
+    getFileName(filePath) {
+      return filePath.split('/').pop();
+    },
 
     handleImageUpload() {
       this.image = this.$refs.image.files[0];
@@ -255,7 +262,7 @@ img {
 
 .tableFixHead {
   overflow-y: auto;
-  height: 72vh;
+  height: 65.5vh;
 }
 
 .tableFixHead th {
@@ -275,10 +282,5 @@ table th {
 
 table td {
   border: .1rem solid cyan;
-}
-
-input {
-  padding-left: 2px;
-  font-family: "FontAwesome";
 }
 </style>
