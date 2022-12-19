@@ -1,6 +1,18 @@
 <template>
 
-  <div class="container-fluid mt-3 pt-3 text-center">
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast text-bg-danger" role="alert" aria-live="assertive" aria-atomic="true"
+      data-bs-delay="2500">
+      <div class="toast-header">
+        <font-awesome-icon icon="fa-solid fa-triangle-exclamation" style="color:red" />
+        <strong class="me-auto text-dark fs-5 ps-2">Error!</strong>
+      </div>
+      <div class="toast-body">
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-4 pt-4 text-center">
     <div v-if="$store.state.isAuthenticated" class="logout text-center">
       <form @submit.prevent="logoutForm">
         <button type="submit" class="mt-3 btn btn-dark btn-lg rounded-5 col-2 text-light fw-bold fs-5"
@@ -20,13 +32,14 @@
 
 import axios from 'axios'
 
+
 export default {
   name: 'App',
+
   beforeCreate() {
     this.$store.commit('initializeStore')
 
     const access = this.$store.state.access
-
     const user = this.$store.state.isAuthenticated
 
     if ((access) && (user)) {
@@ -44,20 +57,19 @@ export default {
       this.$router.push('/apidata')
       setInterval(() => {
         this.getAccess()
-      }, 30000)
+      }, 29000)
     }
     else {
       this.$router.push('/')
     }
-
 
   },
   methods: {
 
     logoutForm(e) {
       this.$store.commit('removeAccess');
-      localStorage.setItem('access', '');
-      localStorage.setItem('refresh', '');
+      localStorage.removeItem('access');
+      localStorage.removeItem('refresh');
       axios.defaults.headers.common['Authorization'] = ''
       const user = this.$store.state.isAuthenticated
       if (!user) {
@@ -84,13 +96,12 @@ export default {
   }
 }
 
-
 </script>
 
 
 <style lang="scss">
 body {
-  padding-top: 70px;
+  margin-top: 10vh;
   background: linear-gradient(to right, cyan, blue, black);
 }
 
@@ -99,6 +110,7 @@ html {
 }
 
 .navbar {
+  height: 15vh;
   border-bottom: .4vh solid white;
   background: linear-gradient(to right, white, cyan, rgb(0, 230, 255), rgb(0, 180, 255), rgb(0, 160, 255), rgb(0, 130, 255), rgb(0, 100, 255));
 }
